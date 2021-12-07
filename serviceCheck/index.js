@@ -2,7 +2,6 @@ const isUp = require("is-up");
 const aws = require("aws-sdk");
 const ses = new aws.SES({ region: "us-west-2" });
 exports.helloFromLambdaHandler = async (event) => {
-  // If you change this message, you will need to change hello-from-lambda.test.js
 
   const status = await isUp(event.url);
   if (status==true){
